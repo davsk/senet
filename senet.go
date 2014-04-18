@@ -12,6 +12,7 @@ import (
 func main() {
 	//runtime.LockOSThread()
 	InitSteam()
+	defer CloseSteam()
 
 	if err := InitQml(); err != nil {
 		log.Fatal(err)

@@ -4,7 +4,6 @@ package main
 
 import (
 	"gopkg.in/v0/qml"
-	"log"
 	"os"
 )
 
@@ -15,9 +14,8 @@ func InitQml() error {
 	qml.Init(nil)
 	engine := qml.NewEngine()
 	engine.On("quit", func() { os.Exit(0) })
-	component, err := engine.LoadFile("data/senet.qml")
+	component, err := engine.LoadFile("senet.qml")
 	if err != nil {
-		log.Println("Error loading file.")
 		return err
 	}
 	window := component.CreateWindow(nil)

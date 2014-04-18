@@ -3,19 +3,19 @@
 package main
 
 import (
-	"github.com/go-steam/steam"
+//"gopkg.in/steam.v0"
 )
 
 var isSteam bool
 
 func InitSteam() bool {
-	isSteam = steam.IsSteamRunning()
+	//isSteam = steam.IsSteamRunning()
 
 	return isSteam
 }
 
 func CloseSteam() {
 	if isSteam {
-		steam.Shutdown()
+		//	steam.Shutdown()
 	}
 }
